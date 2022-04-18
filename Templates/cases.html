@@ -1,0 +1,84 @@
+{% extends "index.html" %} {% block title %}Total cases{% endblock %} {% block
+    content %}
+<html>
+  <head>
+    <h2></h2>
+    <h2 align="center" style="background-color:rgb(235, 155, 18);">Total number of active cases in each country</h2>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Active Cases'],
+          ['Albania',274462],
+          ['Argentina',9059944],
+          ['Australia',5351477],
+          ['Austria',4045809],
+          ['Bulgaria',1148971],
+          ['Canada',3632318],
+          ['Chile',3528626],
+          ['Colombia',6089381],
+          ['Croatia',1113135],
+          ['Cuba',1099444],
+          ['Czechia',3880556],
+          ['Denmark',2947910],
+          ['Estonia',567183],
+          ['France',27684374],
+          ['Germany',23411577],
+          ['Greece',3232496],
+          ['Guatemala',837492],
+          ['India',43041995],
+          ['Indonesia',6039266],
+          ['Iran',7205064],
+          ['Iraq',2323040],
+          ['Italy',15659835],
+          ['Japan',7287343],
+          ['Latvia',812877],
+          ['Lebanon',1095518],
+          ['Lithuania',1048704],
+          ['Luxembourg',229311],
+          ['Malawi',85727],
+          ['Malaysia',4372697],
+          ['Malta',88558],
+          ['Mexico',5725075],
+          ['Moldova',516316],
+          ['Nigeria',255646],
+          ['Philippines',3682847],
+          ['Poland',5984940],
+          ['Romania',2881322],
+          ['Russia',18064454],
+          ['Saint-Lucia',23094],
+          ['Saudi-Arabia',752479],
+          ['Serbia',1995351],
+          ['Singapore',1157251],
+          ['Slovakia',1763197],
+          ['Slovenia',996832],
+          ['South-Africa',3740398],
+          ['Thailand',4012184],
+          ['Trinidad-and-Tobago',141853],
+          ['Turkey',14991669],
+          ['USA',82300022],
+          ['Uruguay',895451],
+          ['Vietnam',10394533],
+          ['Yemen',11817]
+        ])
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 1200px; height: 500px;"></div>
+  </body>
+</html>
+{% endblock %}
+
+  

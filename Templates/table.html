@@ -1,0 +1,109 @@
+{% extends "index.html" %} {% block title %}Total cases{% endblock %} {% block
+  content %}
+
+<html>
+<head>
+<style>
+* {
+box-sizing: border-box;
+}
+
+.row {
+margin-left:-5px;
+margin-right:-5px;
+}
+
+.column {
+float: left;
+width: 60%;
+padding: 5px;
+}
+/* Clearfix (clear floats) */
+.row::after {
+content: "";
+clear: both;
+display: table;
+}
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 50%;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+
+tr:nth-child(even) {
+background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<h2 align = 'Center'></h2>
+<h2 align = 'Center' style="background-color:rgb(235, 155, 18);">COVID 19 DATA SUMMARY</h2>
+<h2 align = 'Center'>
+<div class="row">
+<div class="column">
+<table>
+<tr>
+  <th>Continent</th>
+  <th>No. of Countries</th>
+  <th>Total Population</th>
+  <th>Total Cases</th>
+  <th>Total Deaths</th>
+</tr>
+<tr>
+  <td>Africa</td>
+  <td>3</td>  
+  <td>295870300</td>  
+  <td>4081771</td>  
+  <td>105918</td>
+</tr>
+<tr>
+  <td>Asia</td>
+  <td>14</td>  
+  <td>2416144000</td>  
+  <td>106367703</td>  
+  <td>1159048</td>
+</tr>
+<tr>
+  <td>Europe</td>
+  <td>22</td>
+  <td>489869600</td>
+  <td>118348170</td>
+  <td>1213121</td>
+</tr>
+<tr>
+  <td>North-America</td>
+  <td>7</td>
+  <td>535558100</td>
+  <td>93759298</td>
+  <td>1407697</td>
+</tr>
+<tr>
+  <td>Oceania</td>
+  <td>1</td>
+  <td>26027460</td>
+  <td>5351477</td>
+  <td>6762</td>
+
+</tr>
+<tr>
+  <td>South-America</td>
+  <td>4</td>
+  <td>120689400</td>
+  <td>19573402</td> 
+  <td>332492</td>
+</tr>
+</table>
+</h2>
+
+
+</body>
+</html>
+
+
+{% endblock %}

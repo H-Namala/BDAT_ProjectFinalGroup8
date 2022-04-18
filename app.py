@@ -18,7 +18,7 @@ mongo = PyMongo(app)
 
 @app.route('/', methods = ['POST', 'GET'])
 def index():
-    return render_template ('base.html')
+    return render_template ('Templates/base.html')
 
 @app.route('/data', methods = ['POST', 'GET'])
 def Data():
